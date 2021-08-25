@@ -1,6 +1,7 @@
 import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
 import {MatTabsModule} from '@angular/material/tabs';
+import {MatButtonModule} from '@angular/material/button';
 import { DocumentEditorAllModule, DocumentEditorContainerModule } from '@syncfusion/ej2-angular-documenteditor';
 
 import { AppRoutingModule } from './app-routing.module';
@@ -13,6 +14,7 @@ import { PdfLibComponent } from './pdf-lib/pdf-lib.component';
 import { PdftronComponent } from './pdftron/pdftron.component';
 import { SejdaPdfComponent } from './sejda-pdf/sejda-pdf.component';
 import { HttpClientModule } from '@angular/common/http';
+import { Pdf2htmlEXComponent } from './pdf2html-ex/pdf2html-ex.component';
 
 @NgModule({
   declarations: [
@@ -22,7 +24,8 @@ import { HttpClientModule } from '@angular/common/http';
     SyncfusionMoreComponent,
     PdfLibComponent,
     PdftronComponent,
-    SejdaPdfComponent
+    SejdaPdfComponent,
+    Pdf2htmlEXComponent
   ],
   imports: [
     BrowserModule,
@@ -30,8 +33,9 @@ import { HttpClientModule } from '@angular/common/http';
     BrowserAnimationsModule,
     HttpClientModule,
     MatTabsModule,
+    MatButtonModule,
     DocumentEditorAllModule,
-    DocumentEditorContainerModule
+    DocumentEditorContainerModule,
   ],
   providers: [],
   bootstrap: [AppComponent]

@@ -59,6 +59,6 @@ export class SyncfusionMoreComponent implements OnInit {
 
     //Cast to a File() type
     return <File>blob;
-}
+  }
 
 }

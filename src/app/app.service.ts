@@ -12,14 +12,33 @@ const headers = new HttpHeaders()
 export class AppService {
     constructor(private http: HttpClient){}
 
-    private serviceUrl = 'http://localhost:8000/pdftoword/';
+    private baseServiceUrl = 'http://localhost:8000/';
 
     getWordDoc(filename: String): Observable<Blob>{
         const body = {filename: filename}
 
-        return this.http.post(this.serviceUrl, body, { responseType: 'blob', headers: headers}).pipe(
+        return this.http.post(this.baseServiceUrl + 'pdftoword/', body, { responseType: 'blob', headers: headers}).pipe(
           tap(_ => console.log('Converting pdf to word')),
           catchError(this.handleError<Blob>('getWordDoc'))
+        );
+    }
+
+    gethtmlfrompdf(filename: String): Observable<Blob> {
+        const body = {filename: filename}
+
+        return this.http.post(this.baseServiceUrl + 'pdf2htmlEX/', body, { responseType: 'blob', headers: headers}).pipe(
+          tap(_ => console.log('Converting pdf to html')),
+          catchError(this.handleError<Blob>('gethtmlfrompdf'))
+        );
+    }
+
+    saveEditedPdf(file : File): Observable<Blob> {
+        let formData = new FormData();
+        formData.append('html', file);
+
+        return this.http.post(this.baseServiceUrl + 'saveEditedPdf/', formData, { responseType: 'blob', headers: headers}).pipe(
+          tap(_ => console.log('Converting pdf to html')),
+          catchError(this.handleError<Blob>('gethtmlfrompdf'))
         );
     }
 

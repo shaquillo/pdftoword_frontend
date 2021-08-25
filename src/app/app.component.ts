@@ -5,6 +5,7 @@ import { Component } from '@angular/core';
   templateUrl: './app.component.html',
   styleUrls: ['./app.component.scss']
 })
+
 export class AppComponent {
   title = 'pdf-editors';
 
@@ -28,6 +29,10 @@ export class AppComponent {
     {
       label: 'pdf-lib',
       link: './pdf-lib'
+    },
+    {
+      label: 'pdf2htmlEX',
+      link: './pdf2htmlEX'
     }
   ]
 }

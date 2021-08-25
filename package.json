@@ -23,6 +23,7 @@
     "@angular/router": "~9.1.1",
     "@pdftron/webviewer": "^8.0.0",
     "@syncfusion/ej2-angular-documenteditor": "^19.2.55",
+    "file-saver": "^2.0.5",
     "pdf-lib": "^1.16.0",
     "rxjs": "~6.5.4",
     "sejda-js": "^2.0.1",
