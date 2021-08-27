@@ -1,0 +1,25 @@
+.pdf_editor {
+    width: 80%;
+    height: 70%;
+}
+
+.wrapper {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    padding-top: 20px;
+}
+
+.edit-button {
+    position: fixed;
+    right: 40px;
+    bottom: 40px;
+    z-index: 1000;
+    border-radius: 50px;
+    background-color: rgb(50, 50, 173);
+    color: white;
+    font-weight: 500;
+    width: 60px;
+    height: 40px;
+}

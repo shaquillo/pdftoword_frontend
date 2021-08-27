@@ -6,6 +6,7 @@ import { PdftronComponent } from './pdftron/pdftron.component';
 import  { SejdaPdfComponent } from './sejda-pdf/sejda-pdf.component';
 import { PdfLibComponent } from './pdf-lib/pdf-lib.component';
 import { Pdf2htmlEXComponent } from './pdf2html-ex/pdf2html-ex.component';
+import { PdfviewerComponent } from './pdfviewer/pdfviewer.component';
 
 const routes: Routes = [
   { path:  '', redirectTo: '/syncfusion', pathMatch: 'full'},
@@ -14,7 +15,7 @@ const routes: Routes = [
   { path: 'pdftron', component: PdftronComponent },
   { path: 'sejda', component: SejdaPdfComponent },
   { path: 'pdf-lib', component: PdfLibComponent },
-  { path: 'pdf2htmlEX', component: Pdf2htmlEXComponent }
+  { path: 'pdf2htmlEX', component: PdfviewerComponent, children: [ {path: 'edit', component: Pdf2htmlEXComponent } ] }
 
 ];
 

@@ -33,10 +33,10 @@ export class AppService {
     }
 
     saveEditedPdf(file : File): Observable<Blob> {
-        let formData = new FormData();
-        formData.append('html', file);
+        const formData: FormData = new FormData();
+        formData.append('html', file, file.name);
 
-        return this.http.post(this.baseServiceUrl + 'saveEditedPdf/', formData, { responseType: 'blob', headers: headers}).pipe(
+        return this.http.post(this.baseServiceUrl + 'saveEditedPdf/', formData, { responseType: 'blob' }).pipe(
           tap(_ => console.log('Converting pdf to html')),
           catchError(this.handleError<Blob>('gethtmlfrompdf'))
         );

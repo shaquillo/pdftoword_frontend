@@ -15,6 +15,7 @@ import { PdftronComponent } from './pdftron/pdftron.component';
 import { SejdaPdfComponent } from './sejda-pdf/sejda-pdf.component';
 import { HttpClientModule } from '@angular/common/http';
 import { Pdf2htmlEXComponent } from './pdf2html-ex/pdf2html-ex.component';
+import { PdfviewerComponent } from './pdfviewer/pdfviewer.component';
 
 @NgModule({
   declarations: [
@@ -25,7 +26,8 @@ import { Pdf2htmlEXComponent } from './pdf2html-ex/pdf2html-ex.component';
     PdfLibComponent,
     PdftronComponent,
     SejdaPdfComponent,
-    Pdf2htmlEXComponent
+    Pdf2htmlEXComponent,
+    PdfviewerComponent
   ],
   imports: [
     BrowserModule,

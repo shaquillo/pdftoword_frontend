@@ -19,7 +19,7 @@ export class SyncfusionMoreComponent implements OnInit {
 
   constructor(private apiService: AppService) {
     this.serviceLink = 'https://ej2services.syncfusion.com/production/web-services/api/documenteditor/';
-    this.filename = 'f19-08-2021_16-21-20';
+    this.filename = 'feicom';  // 'f19-08-2021_16-21-20';
    }
 
   ngOnInit(): void {
