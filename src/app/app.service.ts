@@ -32,12 +32,22 @@ export class AppService {
         );
     }
 
-    saveEditedPdf(file : File): Observable<Blob> {
+    saveEditedHtml(file : File): Observable<Blob> {
         const formData: FormData = new FormData();
         formData.append('html', file, file.name);
 
-        return this.http.post(this.baseServiceUrl + 'saveEditedPdf/', formData, { responseType: 'blob' }).pipe(
+        return this.http.post(this.baseServiceUrl + 'saveEditedHtml/', formData, { responseType: 'blob' }).pipe(
           tap(_ => console.log('Converting pdf to html')),
+          catchError(this.handleError<Blob>('gethtmlfrompdf'))
+        );
+    }
+
+    saveEditedPdf(file : File): Observable<Blob> {
+        const formData: FormData = new FormData();
+        formData.append('pdf', file, file.name);
+
+        return this.http.post(this.baseServiceUrl + 'saveEditedPdf/', formData, { responseType: 'blob' }).pipe(
+          tap(_ => console.log('Saving edited pdf')),
           catchError(this.handleError<Blob>('gethtmlfrompdf'))
         );
     }

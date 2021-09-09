@@ -19,20 +19,20 @@ export class AppComponent {
       link: './syncfusion-more'
     },
     {
-      label: 'pdftron',
-      link: './pdftron'
-    },
-    {
       label: 'sejda',
       link: './sejda'
     },
     {
-      label: 'pdf-lib',
-      link: './pdf-lib'
+      label: 'pdfEditor',
+      link: './pdftron'
     },
-    {
-      label: 'pdf2htmlEX',
-      link: './pdf2htmlEX'
-    }
+    // {
+    //   label: 'pdfEditor',
+    //   link: './pdf-lib'
+    // },
+    // {
+    //   label: 'pdf2htmlEX',
+    //   link: './pdf2htmlEX'
+    // }
   ]
 }

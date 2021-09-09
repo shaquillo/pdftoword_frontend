@@ -14,8 +14,9 @@ const routes: Routes = [
   { path: 'syncfusion-more', component: SyncfusionMoreComponent},
   { path: 'pdftron', component: PdftronComponent },
   { path: 'sejda', component: SejdaPdfComponent },
-  { path: 'pdf-lib', component: PdfLibComponent },
-  { path: 'pdf2htmlEX', component: PdfviewerComponent, children: [ {path: 'edit', component: Pdf2htmlEXComponent } ] }
+  // { path: 'pdf-lib', component: PdfLibComponent , children: [ {path: 'addText', component: PdftronComponent }, {path: 'modifyText', component: Pdf2htmlEXComponent} ]},
+  { path: 'pdftron/edit', component: Pdf2htmlEXComponent }
+  // { path: 'pdf2htmlEX', component: PdfviewerComponent, children: [ {path: 'edit', component: Pdf2htmlEXComponent } ] }
 
 ];
 
