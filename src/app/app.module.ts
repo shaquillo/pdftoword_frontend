@@ -2,42 +2,39 @@ import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
 import {MatTabsModule} from '@angular/material/tabs';
 import {MatButtonModule} from '@angular/material/button';
-import { DocumentEditorAllModule, DocumentEditorContainerModule } from '@syncfusion/ej2-angular-documenteditor';
+import {MatSliderModule} from '@angular/material/slider';
+import {MatIconModule} from '@angular/material/icon';
+import { ColorPickerModule } from 'ngx-color-picker';
+import { CKEditorModule } from '@ckeditor/ckeditor5-angular';
 
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
-import { SyncfusionComponent } from './syncfusion/syncfusion.component';
-import { PdfFileEditorComponent } from './pdf-file-editor/pdf-file-editor.component';
-import { SyncfusionMoreComponent } from './syncfusion-more/syncfusion-more.component';
-import { PdfLibComponent } from './pdf-lib/pdf-lib.component';
-import { PdftronComponent } from './pdftron/pdftron.component';
-import { SejdaPdfComponent } from './sejda-pdf/sejda-pdf.component';
 import { HttpClientModule } from '@angular/common/http';
 import { Pdf2htmlEXComponent } from './pdf2html-ex/pdf2html-ex.component';
-import { PdfviewerComponent } from './pdfviewer/pdfviewer.component';
+import { CkeditorComponent } from './ckeditor/ckeditor.component';
+import { FormsModule } from '@angular/forms';
+import { PopoverModule } from 'ngx-smart-popover';
 
 @NgModule({
   declarations: [
     AppComponent,
-    SyncfusionComponent,
-    PdfFileEditorComponent,
-    SyncfusionMoreComponent,
-    PdfLibComponent,
-    PdftronComponent,
-    SejdaPdfComponent,
     Pdf2htmlEXComponent,
-    PdfviewerComponent
+    CkeditorComponent,
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
     BrowserAnimationsModule,
     HttpClientModule,
+    FormsModule,
     MatTabsModule,
     MatButtonModule,
-    DocumentEditorAllModule,
-    DocumentEditorContainerModule,
+    MatSliderModule,
+    MatIconModule,
+    ColorPickerModule,
+    CKEditorModule,
+    PopoverModule
   ],
   providers: [],
   bootstrap: [AppComponent]

@@ -11,28 +11,12 @@ export class AppComponent {
 
   navLinks = [
     {
-      label: 'syncfusion',
-      link: './syncfusion'
-    },
-    {
-      label: 'syncfusion-more',
-      link: './syncfusion-more'
-    },
-    {
-      label: 'sejda',
-      link: './sejda'
-    },
-    {
       label: 'pdfEditor',
-      link: './pdftron'
+      link: './pdfeditor'
     },
-    // {
-    //   label: 'pdfEditor',
-    //   link: './pdf-lib'
-    // },
-    // {
-    //   label: 'pdf2htmlEX',
-    //   link: './pdf2htmlEX'
-    // }
+    {
+      label: 'pdfCKeditor',
+      link: './pdfCKeditor'
+    }
   ]
 }

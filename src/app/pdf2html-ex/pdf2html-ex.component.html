@@ -1,5 +1,41 @@
 <div class="wrapper">
+    <div class="panel">
+        <button id="colorpickertg" #ignoredButton (click)="toggle=!toggle" [style.background-color]="color"></button>
+        <input 
+            #ignoredInput
+            id="colorpicker"
+            [(colorPicker)]="color" 
+            [style.background]="color"
+            [(cpToggle)]="toggle"
+            [cpIgnoredElements]="[ignoredButton, ignoredInput]"
+            [cpPresetColors]="['#fff', '#000', '#2889e9', '#e920e9', '#fff500', 'rgb(236,64,64)']"
+            />
+        <div>
+            <div class=""
+                [popover]="sliderPopover"
+                popoverPlacement="bottom"
+                [popoverOnHover]="true"
+                [popoverCloseOnClickOutside]="false"
+                [popoverCloseOnMouseOutside]="true"
+                [popoverDisabled]="false"
+                [popoverAnimation]="true"
+                [popoverDismissTimeout]="10000">
+                <mat-icon aria-hidden="false" aria-label="resize elements">aspect_ratio</mat-icon>
+            </div>
+            <popover-content #sliderPopover
+                [closeOnMouseOutside]="true" 
+                [closeOnClickOutside]="true"> 
+                <div class="popover-container">
+                    <mat-slider aria-label="unit(s)"></mat-slider>
+                </div>
+            </popover-content>
+        </div>
+        <div class="header-icon-container">
+            <label for="image-input"><mat-icon aria-hidden="false" aria-label="insert image">perm_media</mat-icon></label>
+            <input id="image-input" type="file" style="display: none;">
+            
+        </div>
+    </div>
     <iframe id="pdf" #pdf [src]="url_safe"></iframe>
+    <button mat-button class="buttom-button save-button" (click)="saveEditedHtml()">save</button>
 </div>
-<button mat-button class="buttom-button modify-button" (click)="addText()">add text</button>
-<button mat-button class="buttom-button save-button" (click)="saveEditedHtml()">save</button>

@@ -14,15 +14,6 @@ export class AppService {
 
     private baseServiceUrl = 'http://localhost:8000/';
 
-    getWordDoc(filename: String): Observable<Blob>{
-        const body = {filename: filename}
-
-        return this.http.post(this.baseServiceUrl + 'pdftoword/', body, { responseType: 'blob', headers: headers}).pipe(
-          tap(_ => console.log('Converting pdf to word')),
-          catchError(this.handleError<Blob>('getWordDoc'))
-        );
-    }
-
     gethtmlfrompdf(filename: String): Observable<Blob> {
         const body = {filename: filename}
 
