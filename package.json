@@ -23,6 +23,7 @@
     "@angular/router": "~9.1.1",
     "@ckeditor/ckeditor5-angular": "^2.0.2",
     "@ckeditor/ckeditor5-build-decoupled-document": "^29.2.0",
+    "@fortawesome/fontawesome-svg-core": "^1.2.36",
     "@pdftron/webviewer": "^8.0.0",
     "@syncfusion/ej2-angular-documenteditor": "^19.2.55",
     "file-saver": "^2.0.5",

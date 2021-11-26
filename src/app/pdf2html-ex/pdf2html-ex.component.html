@@ -1,10 +1,10 @@
 <div class="wrapper">
     <div class="panel">
         <button id="colorpickertg" #ignoredButton (click)="toggle=!toggle" [style.background-color]="color"></button>
-        <input 
+        <input
             #ignoredInput
             id="colorpicker"
-            [(colorPicker)]="color" 
+            [(colorPicker)]="color"
             [style.background]="color"
             [(cpToggle)]="toggle"
             [cpIgnoredElements]="[ignoredButton, ignoredInput]"
@@ -20,21 +20,27 @@
                 [popoverDisabled]="false"
                 [popoverAnimation]="true"
                 [popoverDismissTimeout]="10000">
-                <mat-icon aria-hidden="false" aria-label="resize elements">aspect_ratio</mat-icon>
+                <mat-icon aria-hidden="false" aria-label="resize elements" class="logo-color">aspect_ratio</mat-icon>
+<!--              <img src="assets/images/width.svg" class="logo-color">-->
             </div>
             <popover-content #sliderPopover
-                [closeOnMouseOutside]="true" 
-                [closeOnClickOutside]="true"> 
+                [closeOnMouseOutside]="true"
+                [closeOnClickOutside]="true">
                 <div class="popover-container">
                     <mat-slider aria-label="unit(s)"></mat-slider>
                 </div>
             </popover-content>
         </div>
         <div class="header-icon-container">
-            <label for="image-input"><mat-icon aria-hidden="false" aria-label="insert image">perm_media</mat-icon></label>
-            <input id="image-input" type="file" style="display: none;">
-            
+            <label for="image-input"><mat-icon aria-hidden="false" aria-label="insert image" class="logo-color">perm_media</mat-icon></label>
+<!--          <label for="image-input"><img src="assets/images/image.svg" class="logo-color"></label>-->
+          <input id="image-input" type="file" style="display: none;">
+
         </div>
+
+      <mat-icon aria-hidden="false" aria-label="resize elements" class="logo-color">table_chart</mat-icon>
+
+<!--      <img src="assets/images/table.svg.svg" class="logo-color">-->
     </div>
     <iframe id="pdf" #pdf [src]="url_safe"></iframe>
     <button mat-button class="buttom-button save-button" (click)="saveEditedHtml()">save</button>
