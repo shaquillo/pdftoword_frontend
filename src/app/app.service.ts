@@ -14,8 +14,8 @@ export class AppService {
 
     private baseServiceUrl = 'http://localhost:8000/';
 
-    gethtmlfrompdf(filename: String): Observable<Blob> {
-        const body = {filename: filename}
+    gethtmlfrompdf(filename: string): Observable<Blob> {
+        const body = {filename: filename};
 
         return this.http.post(this.baseServiceUrl + 'pdf2htmlEX/', body, { responseType: 'blob', headers: headers}).pipe(
           tap(_ => console.log('Converting pdf to html')),
@@ -45,11 +45,11 @@ export class AppService {
 
     private handleError<T>(operation = 'operation', result?: T) {
         return (error: any): Observable<T> => {
-        
+
             console.error(error); // log to console instead
-        
+
             console.log(`${operation} failed: ${error.message}`);
-        
+
             return of(result as T);
         };
     }

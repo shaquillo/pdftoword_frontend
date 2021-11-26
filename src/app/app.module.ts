@@ -5,14 +5,14 @@ import {MatButtonModule} from '@angular/material/button';
 import {MatSliderModule} from '@angular/material/slider';
 import {MatIconModule} from '@angular/material/icon';
 import { ColorPickerModule } from 'ngx-color-picker';
-import { CKEditorModule } from '@ckeditor/ckeditor5-angular';
+// import { CKEditorModule } from '@ckeditor/ckeditor5-angular';
 
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { HttpClientModule } from '@angular/common/http';
 import { Pdf2htmlEXComponent } from './pdf2html-ex/pdf2html-ex.component';
-import { CkeditorComponent } from './ckeditor/ckeditor.component';
+// import { CkeditorComponent } from './ckeditor/ckeditor.component';
 import { FormsModule } from '@angular/forms';
 import { PopoverModule } from 'ngx-smart-popover';
 
@@ -20,7 +20,7 @@ import { PopoverModule } from 'ngx-smart-popover';
   declarations: [
     AppComponent,
     Pdf2htmlEXComponent,
-    CkeditorComponent,
+    // CkeditorComponent,
   ],
   imports: [
     BrowserModule,
@@ -33,7 +33,7 @@ import { PopoverModule } from 'ngx-smart-popover';
     MatSliderModule,
     MatIconModule,
     ColorPickerModule,
-    CKEditorModule,
+    // CKEditorModule,
     PopoverModule
   ],
   providers: [],

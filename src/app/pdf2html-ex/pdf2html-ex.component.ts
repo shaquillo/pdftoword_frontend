@@ -23,13 +23,13 @@ export class Pdf2htmlEXComponent implements OnInit, AfterViewInit {
   public color: string = '#000000';
   public toggle: boolean = false;
 
-  constructor(private apiService: AppService, private sanitizer: DomSanitizer, private router: Router) { 
-    this.filename = 'f19-08-2021_16-21-20';
+  constructor(private apiService: AppService, private sanitizer: DomSanitizer, private router: Router) {
+    this.filename = 'feicom_doc';
     // this.filename = 'feicom';
   }
 
   ngOnInit(): void {
-    
+
     this.apiService.gethtmlfrompdf(this.filename).subscribe(blob => {
       this.html_file_url = URL.createObjectURL(blob);
       this.url_safe= this.sanitizer.bypassSecurityTrustResourceUrl(this.html_file_url);
@@ -71,6 +71,6 @@ export class Pdf2htmlEXComponent implements OnInit, AfterViewInit {
 
     //Cast to a File() type
     return <File>blob;
-  } 
+  }
 
 }
